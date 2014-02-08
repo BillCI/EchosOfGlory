@@ -4,9 +4,9 @@ using System.Collections;
 public class EOGMath {
 
 	public static void planeGiven(Vector3 A,Vector3 B, Vector3 C) {
-		float a = (B.y - A.y) (C.z - A.z) - (C.y - A.y) (B.z - A.z);
-		float b = (B.z - A.z) (C.x - A.x) - (C.z - A.z) (B.x - A.x);
-		float c = (B.x - A.x) (C.y - A.y) - (C.x - A.x) (B.y - A.y);
+		float a = (B.y - A.y) * (C.z - A.z) - (C.y - A.y) * (B.z - A.z);
+		float b = (B.z - A.z) * (C.x - A.x) - (C.z - A.z) * (B.x - A.x);
+		float c = (B.x - A.x) * (C.y - A.y) - (C.x - A.x) * (B.y - A.y);
 		float d = -(a * A.x + b * A.y + c * A.z);
 
 	}

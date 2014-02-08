@@ -33,7 +33,7 @@ public class JointScript : MonoBehaviour {
 	void Update () {
 		float angle = EOGMath.AngleBetween ( this.parrentArm.transform.position,this.childArm.transform.position);
 
-		Debug.Log (this.parrentArm.transform.position + " vs " + this.childArm.transform.position);
+		//Debug.Log (this.parrentArm.transform.position + " vs " + this.childArm.transform.position);
 		this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x,this.transform.eulerAngles.y, (this.targetAngle+180)%360);
 	}
 	//--------------------------------------------------------------------------------

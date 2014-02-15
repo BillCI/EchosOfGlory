@@ -19,6 +19,13 @@ public class MuscleScript : MonoBehaviour {
 	}
 	//TODO some sort of ramping of strength
 	public float currentStrength() {
-		return this.strength;
+		return this.strength * ((this.flexedPecentage-0.5f)*2.0f);
+	}
+	public void flex() {
+		this.flexedPecentage = Mathf.Min(1.0f,this.flexedPecentage + this.acceleration);
+	}
+
+	public void relax() {
+		this.flexedPecentage = Mathf.Max (0.0f,this.flexedPecentage - this.acceleration);
 	}
 }
